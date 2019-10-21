@@ -46,3 +46,8 @@ set smartindent
 set expandtab
 set shiftwidth=4
 set tabstop=4
+syntax on
+
+" Put Plugin Configuration here
+let g:CommandTFileScanner="find"
+let g:CommandTTraverseSCM="pwd"
