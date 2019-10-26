@@ -14,6 +14,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jiangmiao/auto-pairs'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -81,3 +83,9 @@ cmap w!! %!sudo tee > /dev/null %
 " Put Plugin Configuration here
 let g:CommandTFileScanner="find"
 let g:CommandTTraverseSCM="pwd"
+
+" nerdTREE customizations
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
