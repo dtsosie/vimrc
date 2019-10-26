@@ -16,6 +16,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -83,6 +86,8 @@ cmap w!! %!sudo tee > /dev/null %
 " Put Plugin Configuration here
 let g:CommandTFileScanner="find"
 let g:CommandTTraverseSCM="pwd"
+
+let g:deoplete#enable_at_startup = 1
 
 " nerdTREE customizations
 autocmd StdinReadPre * let s:std_in=1
