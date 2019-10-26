@@ -1,6 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,6 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'pangloss/vim-javascript'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -47,6 +46,37 @@ set expandtab
 set shiftwidth=4
 set tabstop=4
 syntax on
+
+" smart backspace
+set backspace=indent,eol,start
+
+" save buffer between changes
+set autowrite
+
+" display of invisibles
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" Use utf-8 Encoding
+set encoding=utf-8
+
+" Enable 256 colors
+set t_Co=256
+
+" to smart search when all lowercase
+set smartcase
+set ignorecase
+
+set backupdir=~/.vim/tmp/                   " for the backup files
+set directory=~/.vim/tmp/                   " for the swap files
+
+" jj to replace escape
+inoremap jj <ESC>
+
+" Enter to make new line in cmd mode
+map <CR> o<Esc>k
+
+" :w!! to sudo write
+cmap w!! %!sudo tee > /dev/null %
 
 " Put Plugin Configuration here
 let g:CommandTFileScanner="find"
