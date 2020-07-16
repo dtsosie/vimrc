@@ -2,7 +2,8 @@
 
 YouComplete Prequisites
 
-# Ubuntu (Untested; Probably need to change /usr/local/bin/pip3 to just pip3 at the end)
+# Ubuntu
+###### Untested: Probably need to change /usr/local/bin/pip3 to just pip3 at the end
 
 sudo apt install build-essential cmake python3-dev vim-nox ruby-all-dev
 

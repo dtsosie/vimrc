@@ -71,8 +71,8 @@ set t_Co=256
 set smartcase
 set ignorecase
 
-set backupdir=~/.vim/tmp/                   " for the backup files
-set directory=~/.vim/tmp/                   " for the swap files
+set backupdir=~/.vim/vimrc/tmp/                   " for the backup files
+set directory=~/.vim/vimrc/tmp/                   " for the swap files
 
 " jj to replace escape
 inoremap jj <ESC>
